@@ -93,6 +93,9 @@ In the following case, please put `s%3A3xxaFrMMXWi1xxxtm23BjBYJTc8GAb7P.xxyxxzhx
 ### OVERLEAF_HOST
 The OVERLEAF_HOST parameter can be used to sync with a self-hosted Community Edition or Server Pro Overleaf instance. The parameter defaults to `www.overleaf.com`, when not set.
 
+### OVERLEAF_COOKIE_NAME
+The OVERLEAF_COOKIE_NAME parameter can be used to sync with a self-hosted Community Edition or Server Pro Overleaf instance if the Session Cookie name is changed. The parameter defaults to `overleaf_session2`, when not set.
+
 To set the value, just add the environment variable to the actions step, as seen below:
 ```
     - name: Fetch the latest version from overleaf server
@@ -101,4 +104,5 @@ To set the value, just add the environment variable to the actions step, as seen
         OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
         OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
         OVERLEAF_HOST: ${{ secrets.OVERLEAF_HOST }}
+        ...
 ```

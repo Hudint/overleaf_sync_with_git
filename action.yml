@@ -16,6 +16,9 @@ inputs:
   OVERLEAF_HOST:
     description: "Hostname of your Overleaf Instance, default is www.overleaf.com"
     default: "www.overleaf.com"
+  OVERLEAF_COOKIE_NAME: # name of the session cookie
+    description: "Name of the Overleaf Session Cookie, default is overleaf_session2"
+    default: "overleaf_session2"
 
 
 runs:
@@ -25,4 +28,5 @@ runs:
     - ${{ inputs.OVERLEAF_COOKIE }}
     - ${{ inputs.OVERLEAF_PROJECT_ID }}
     - ${{ inputs.OVERLEAF_HOST }}
+    - ${{ inputs.OVERLEAF_COOKIE_NAME }}
 
