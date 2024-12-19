@@ -15,6 +15,8 @@ HOST="$INPUT_OVERLEAF_HOST"
 
 echo "Dumping zip file at $ZIP_OUTPUT_PATH"
 
+echo "Curl https://$HOST/project/$PROJECT_ID/download/zip"
+
 curl "https://$HOST/project/$PROJECT_ID/download/zip" \
   -H "authority: $HOST" \
   -H 'pragma: no-cache' \
